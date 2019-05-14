@@ -1,0 +1,27 @@
+{
+  "name": "@granite-elements/granite-vaadin-router",
+  "version": "1.0.0",
+  "description": "A wrap on @vaadin/router to address hash (#) navigation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostinbrittany/granite-vaadin-router.git"
+  },
+  "keywords": [
+    "vaadin",
+    "router",
+    "hash"
+  ],
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lostinbrittany/granite-vaadin-router/issues"
+  },
+  "homepage": "https://github.com/lostinbrittany/granite-vaadin-router#readme",
+  "dependencies": {
+    "@vaadin/router": "^1.2.0"
+  }
+}
