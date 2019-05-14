@@ -26,14 +26,5 @@ const HASHCHANGE = {
   },
 };
 
-const HASHPOPSTATE = {
-  activate() {
-    window.addEventListener('popstate', globalHashChangeHandler);
-  },
 
-  inactivate() {
-    window.removeEventListener('popstate', globalHashChangeHandler);
-  },
-};
-
-Router.NavigationTrigger = [HASHCHANGE, HASHPOPSTATE];
+Router.NavigationTrigger = [HASHCHANGE];
