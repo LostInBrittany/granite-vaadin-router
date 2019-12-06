@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/lostinbrittany/granite-vaadin-router#readme",
   "dependencies": {
-    "@vaadin/router": "^1.2.0"
+    "@vaadin/router": "~1.2.0"
   }
 }
