@@ -1,4 +1,4 @@
-import { Router } from '../@vaadin/router.js';
+import { Router } from '@vaadin/router';
 
 class HashRouter extends Router {
   __onNavigationEvent(event) {

@@ -1,6 +1,6 @@
 {
   "name": "@granite-elements/granite-vaadin-router",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A wrap on @vaadin/router to address hash (#) navigation",
   "main": "index.js",
   "module": "index.js",
