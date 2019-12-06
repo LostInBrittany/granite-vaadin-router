@@ -1,20 +1,14 @@
-import { Router } from '@vaadin/router';
+import { Router } from '../@vaadin/router.js';
 
-
-export class HashRouter extends Router {
-  __updateBrowserHistory(pathname, replace) {
-    if (window.location.hash.substring(1) !== pathname) {
-      window.location.hash = '#' + pathname;
-    }
-  }
+class HashRouter extends Router {
   __onNavigationEvent(event) {
     let hash = (window.location.hash ? window.location.hash.substring(1) : '');
-    const pathname = event ? event.detail.pathname : hash;
+    const pathname = event ? event.detail.pathname : hash; 
     if (isString(this.__normalizePathname(pathname))) {
       if (event && event.preventDefault) {
         event.preventDefault();
       }
-      this.render(pathname, true);
+      this.render({pathname, search:'', hash}, true);
     }
   }
 }
@@ -22,7 +16,7 @@ export class HashRouter extends Router {
 function globalHashChangeHandler(event) {
   const pathname = event.newURL && event.newURL.indexOf('#') > -1
     ? event.newURL.substring(event.newURL.indexOf('#') + 1)
-    : '/';
+    : '/'; 
     Router.go(pathname);
 }
 
@@ -43,3 +37,5 @@ const HASHCHANGE = {
 
 
 Router.NavigationTrigger = [HASHCHANGE];
+
+export { HashRouter };
